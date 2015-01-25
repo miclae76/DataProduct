@@ -15,9 +15,9 @@ shinyServer(function(input, output) {
                 
                 ## Render a barplot
                 plot(dataInput()[,input$ticker],
-                        main=paste(input$ticker, " Vs", input$ticker2, "from", input$period),
-                        ylab="Consumption (in EUR)", type="l", col="blue", ylim=c(50,200),
-                        xlab="Days")
+                     main=paste(input$ticker, " Vs", input$ticker2, "from", input$period),
+                     ylab="Consumption (in EUR)", type="l", col="blue", ylim=c(50,200),
+                     xlab="Days")
                 lines(dataInput()[,input$ticker2], type="l", col="red")
                 legend("topleft", c(input$ticker, input$ticker2), cex=0.8, 
                        col=c("blue","red"), lty=1)

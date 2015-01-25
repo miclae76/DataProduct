@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Performance</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Stock Performance">
+  <meta name="author" content="Michael Laenen">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Stock Performance</h1>
+    <h2>US Technology Large Caps</h2>
+    <p>Michael Laenen<br/>BI Architect</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Description</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The Shiny App I wrote allows you to compare stocks performance. I&#39;ve limited the
+stock list to companies with Capitalisation &gt; 10 Billions USD.</p>
+
+<p>Figures are for the years 2012 to 2014.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Details</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Based on real stock price history (Adj Close) renormalized on a 100 basis to allow compariso in return.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Example</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Below a sample of the first 5 lines of the CSV file.</p>
+
+<pre><code>##   ï..Time.Year  Time.Date Ticker   AAPL CDW   CTRX FB GOOG  GOOGL   INTC
+## 1         2012 2012-04-05     NA 100.00  NA 100.00 NA   NA 100.00 100.00
+## 2         2012 2012-04-09     NA 100.40  NA  99.44 NA   NA  99.77  98.90
+## 3         2012 2012-04-10     NA  99.17  NA  96.88 NA   NA  99.13  97.76
+## 4         2012 2012-04-11     NA  98.81  NA  98.31 NA   NA 100.58  99.22
+## 5         2012 2012-04-12     NA  98.27  NA  99.23 NA   NA 102.95 101.45
+##     MSFT     MU   QCOM    STX   TECD    TXN    WDC
+## 1 100.00 100.00 100.00 100.00 100.00 100.00 100.00
+## 2  98.66  96.84  98.98 103.03  98.65  99.00  99.87
+## 3  96.67  94.20  98.56  99.66  97.42  97.61  96.30
+## 4  96.30  94.47  98.56 100.64  98.54  98.54  96.17
+## 5  98.28  94.20 101.69 104.91 100.32 100.17  98.61
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Lessons learned</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Necessary to use reactive function when multiple inputs</p></li>
+<li><p>In the renderPlot function, the name of the dataframe must be followed by parentheses.</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Description'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Details'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Example'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Lessons learned'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title=''>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
